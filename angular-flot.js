@@ -45,7 +45,7 @@ angular.module('angular-flot', []).directive('flot', ['$timeout', function ($tim
       });
 
       var init = function () {
-        var plotObj = $.plot(plotArea, scope.dataset, scope.options);
+        var plotObj = $.plotAnimator(plotArea, scope.dataset, scope.options);
 
         if (scope.callback) {
           scope.callback(plotObj);
